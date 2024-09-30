@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { WelcomePage } from "@/components/WelcomePage"
-import { HeaderHome } from "@/components/HeaderHome"
 import { useRouter } from "next/navigation"
 
 export default function HomePage() {

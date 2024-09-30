@@ -6,7 +6,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
   import db from "@/db/db"
-  import { formatCurrency, formatNumber } from "@/lib/formatters"
+  import { formatNumber } from "@/lib/formatters"
   
   
   async function getProductData() {

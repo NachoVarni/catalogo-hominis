@@ -2,7 +2,6 @@
 
 import db from "@/db/db"
 import { z } from "zod"
-import fs from "fs/promises"
 import { notFound, redirect } from "next/navigation"
 import { revalidatePath } from "next/cache"
 import { createClient } from '@supabase/supabase-js';
@@ -59,9 +58,6 @@ export async function addProduct(prevState: unknown, formData: FormData) {
     data.image3 && data.image3.size > 0 ? uploadImage(data.image3) : Promise.resolve(null),
   ]);
 
-  console.log('data.image3', data.image3)
-  console.log('image3Url', image3Url)
-
     await db.product.create({
       data: {
         isAvailableForPurchase: false,
@@ -106,7 +102,7 @@ export async function updateProduct(
 
     const uploadImage = async (file: File) => {
       const filePath = `products/${crypto.randomUUID()}-${file.name}`;
-      const { data: uploadData, error } = await supabase.storage
+      const { error } = await supabase.storage
         .from('products')
         .upload(filePath, file, {
           contentType: file.type,

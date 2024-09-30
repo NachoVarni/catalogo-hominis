@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
 import { addProduct, updateProduct } from "../../_actions/products"
 import { useFormState, useFormStatus } from "react-dom"
 import { Product } from "@prisma/client"
@@ -31,23 +30,6 @@ export function ProductForm({ product }: { product?: Product | null }) {
         />
         {error?.name && <div className="text-destructive">{error?.name}</div>}
       </div>
-      {/* <div className="space-y-2">
-        <Label htmlFor="priceInCents">Price In Cents</Label>
-        <Input
-          type="number"
-          id="priceInCents"
-          name="priceInCents"
-          required
-          value={priceInCents}
-          onChange={e => setPriceInCents(Number(e.target.value) || 1)}
-        />
-        <div className="text-muted-foreground">
-          {formatCurrency(priceInCents / 100)}
-        </div>
-        {error?.priceInCents && (
-          <div className="text-destructive">{error?.priceInCents}</div>
-        )}
-      </div> */}
       <div className="space-y-2">
         <Label htmlFor="description">Material</Label>
         <Textarea

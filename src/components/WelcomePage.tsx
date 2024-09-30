@@ -2,14 +2,13 @@ import Image from "next/image";
 import { HominisLogo } from "../../public/icons";
 
 interface WelcomePageProps {
-  handleNextClick: () => void;
   showPopup: boolean;
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
   handleGoProducts: () => void;
 }
 
 
-export const WelcomePage = ({ handleNextClick, showPopup, setShowPopup, handleGoProducts }: WelcomePageProps) => {
+export const WelcomePage = ({ showPopup, setShowPopup, handleGoProducts }: WelcomePageProps) => {
   return (
     <div className="font-poppins text-black flex w-full">
       <div className="w-full mt-14 ml-5 mr-5 md:ml-8">
