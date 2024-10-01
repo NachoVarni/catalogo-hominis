@@ -40,9 +40,6 @@ export function ProductCard({
       <CardHeader>
         <CardTitle className="text-blue font-bold">Modelo {name}</CardTitle>
       </CardHeader>
-      {/* <CardContent className="flex-grow">
-        <p className="line-clamp-4 text-blue">{description}</p>
-      </CardContent> */}
     </Card>
   )
 }

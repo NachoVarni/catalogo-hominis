@@ -23,7 +23,6 @@ export const WelcomePage = ({ showPopup, setShowPopup, handleGoProducts }: Welco
           <li className="">Con muchas más piezas para tu elección</li>
           <li className="">Modelos actuales de excelente calidad y diseño, tanto en aleación metal como en acetato y nylon.</li>
           <li className=""> Intuitivo y completo: Cada modelo se presenta en tres imágenes que incluyen también sus medidas.</li>
-          <li className="">Ediciones limitadas y reversiones de los clásicos de siempre.</li>
         </ul>
         <div className="flex justify-end mt-8">
           <button onClick={() => setShowPopup(true)} className="bg-violet px-8 py-3 text-white rounded-xl">Ver más</button>
@@ -50,7 +49,6 @@ export const WelcomePage = ({ showPopup, setShowPopup, handleGoProducts }: Welco
             <ul className="list-disc mt-6 ml-5">
               <li className="text-xl font-bold">Te recomendamos asistir a tu óptica rápidamente luego de solicitar tu autorización y haber elegido el anteojo. De esta manera podés asegurarte que el armazón elegido esté disponible, y que tu receta tendrá la validez estipulada de 60 días.</li>
               <li className="text-xl font-bold">Cuando elijas tu modelo, te sugerimos anotar su código o sacarle una captura de pantalla para cuando te sea solicitado en tu óptica.</li>
-              <li className="text-xl font-bold">Algunos modelos te los recomendamos solo para uso de cerca o para uso de lejos, estaría bueno que lo tomes en cuenta para que elijas bien de acuerdo a tu necesidad</li>
             </ul>
             <div className="flex justify-between mt-8">
               <button className="text-violet font-medium text-sm" onClick={() => setShowPopup(false)}>VOLVER</button>
